@@ -8,17 +8,34 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 const userWord = prompt('Inserisci parola');
 
-let userSplit = userWord.split("");
-console.log(userSplit);
+// let userSplit = userWord.split("");
+// console.log(userSplit);
 
-let userReverse = userSplit.reverse();
-console.log(userReverse);
+// let userReverse = userSplit.reverse();
+// console.log(userReverse);
 
-let userJoin = userReverse.join('');
-console.log(userJoin);
+// let userJoin = userReverse.join('');
+// console.log(userJoin);
 
-if (userWord == userJoin) {
-    console.log('Parola palindroma');
-} else {
-    console.log('Non palindroma');
+// if (userWord == userJoin) {
+//     console.log('Parola palindroma');
+// } else {
+//     console.log('Non palindroma');
+// }
+
+function paliWord(word) {
+    let message = '';
+    let string = word;
+    let stringSplit = string.split('');
+    let stringReverse = stringSplit.reverse();
+    let stringJoin = stringReverse.join('');
+
+    if (string == stringJoin) {
+        message = 'Parola Palindroma';
+    } else {
+       message = 'Parola non palindroma';
+    }
+    return message;
 }
+
+console.log(paliWord(userWord));
