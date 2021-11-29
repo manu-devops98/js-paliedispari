@@ -11,6 +11,16 @@ function numberRandom(num) {
     return number;
 }
 
+function isEven(num) {
+    let message = '';
+    if (num % 2 == 0) {
+        message = 'Pari';
+    } else {
+        message = 'Dispari';
+    }
+    return message;
+}
+
 const evenUser = prompt('Scegli pari o dispari');
 const numberUser = parseInt(prompt('Scegli numero da 1 a 5'));
 
@@ -19,7 +29,7 @@ const numbRandom = numberRandom(5);
 const result = numberUser + numbRandom;
 console.log(result);
 
-if (evenUser =='pari' && result % 2 == 0) {
+if (evenUser == 'pari' && result % 2 == 0) {
     console.log('Hai vinto!');
 } else if (evenUser == 'dispari' && result % 2 == 1) {
     console.log('Hai vinto!');
