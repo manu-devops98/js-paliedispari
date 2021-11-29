@@ -14,14 +14,14 @@ function numberRandom(num) {
 function isEven(num) {
     let message = '';
     if (num % 2 == 0) {
-        message = 'Pari';
+        message = 'pari';
     } else {
-        message = 'Dispari';
+        message = 'dispari';
     }
     return message;
 }
 
-const evenUser = prompt('Scegli pari o dispari');
+const evenUser = prompt('Scegli pari o dispari').toLowerCase();
 const numberUser = parseInt(prompt('Scegli numero da 1 a 5'));
 
 const numbRandom = numberRandom(5);
@@ -29,9 +29,9 @@ const numbRandom = numberRandom(5);
 const result = numberUser + numbRandom;
 console.log(result);
 
-if (evenUser == 'pari' && result % 2 == 0) {
+if (evenUser == 'pari' && isEven(result) == 'pari') {
     console.log('Hai vinto!');
-} else if (evenUser == 'dispari' && result % 2 == 1) {
+} else if (evenUser == 'dispari' && isEven(result) == 'dispari') {
     console.log('Hai vinto!');
 } else {
     console.log('Hai perso');
